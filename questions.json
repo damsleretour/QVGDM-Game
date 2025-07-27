@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Quel est le plus grand océan du monde ?",
+    "A": "Atlantique",
+    "B": "Arctique",
+    "C": "Pacifique",
+    "D": "Indien",
+    "correct": "C"
+  },
+  {
+    "question": "Combien y a-t-il de continents sur Terre ?",
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "8",
+    "correct": "C"
+  },
+  {
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "A": "Vénus",
+    "B": "Mars",
+    "C": "Jupiter",
+    "D": "Mercure",
+    "correct": "B"
+  },
+  {
+    "question": "Quelle est la capitale du Canada ?",
+    "A": "Toronto",
+    "B": "Montréal",
+    "C": "Vancouver",
+    "D": "Ottawa",
+    "correct": "D"
+  },
+  {
+    "question": "Qui a peint la Joconde ?",
+    "A": "Van Gogh",
+    "B": "Monet",
+    "C": "Léonard de Vinci",
+    "D": "Raphaël",
+    "correct": "C"
+  },
+  {
+    "question": "Quel est l'élément chimique dont le symbole est O ?",
+    "A": "Or",
+    "B": "Oxygène",
+    "C": "Osmium",
+    "D": "Opale",
+    "correct": "B"
+  },
+  {
+    "question": "Quel est le plus grand désert du monde ?",
+    "A": "Sahara",
+    "B": "Gobi",
+    "C": "Kalahari",
+    "D": "Arctique",
+    "correct": "A"
+  },
+  {
+    "question": "Quel est le nombre de joueurs dans une équipe de football ?",
+    "A": "9",
+    "B": "10",
+    "C": "11",
+    "D": "12",
+    "correct": "C"
+  },
+  {
+    "question": "Qui a écrit 'Le Petit Prince' ?",
+    "A": "Victor Hugo",
+    "B": "Antoine de Saint-Exupéry",
+    "C": "Albert Camus",
+    "D": "Marcel Proust",
+    "correct": "B"
+  },
+  {
+    "question": "Quel est le plus grand mammifère marin ?",
+    "A": "Orque",
+    "B": "Cachalot",
+    "C": "Requin-baleine",
+    "D": "Baleine bleue",
+    "correct": "D"
+  }
+]
