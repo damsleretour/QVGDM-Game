@@ -1,0 +1,79 @@
+{
+  "project": {
+    "name": "QVGDM - Jeu Télévisé",
+    "version": "1.5",
+    "orientation": "landscape",
+    "firstLayout": "Accueil",
+    "layouts": [
+      {
+        "name": "Accueil",
+        "objects": [
+          { "name": "Logo", "type": "Sprite", "animations": [{ "image": "assets/images/decor_plateau.png" }] },
+          { "name": "BoutonJouer", "type": "Sprite", "animations": [{ "image": "assets/images/boutons.png" }] },
+          { "name": "BoutonAdmin", "type": "Sprite", "animations": [{ "image": "assets/images/boutons.png" }] }
+        ],
+        "events": [
+          {
+            "type": "BuiltinCommonInstructions::Standard",
+            "conditions": [
+              { "type": "CursorOnObject", "parameters": ["BoutonJouer"] },
+              { "type": "MouseButtonReleased", "parameters": ["Left"] }
+            ],
+            "actions": [
+              { "type": "Scene", "parameters": ["Jeu"] }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jeu",
+        "objects": [
+          { "name": "Decor", "type": "Sprite", "animations": [{ "image": "assets/images/decor_plateau.png" }] },
+          { "name": "QuestionTexte", "type": "TextObject", "string": "Question" },
+          { "name": "ReponseA", "type": "TextObject", "string": "Réponse A" },
+          { "name": "ReponseB", "type": "TextObject", "string": "Réponse B" },
+          { "name": "ReponseC", "type": "TextObject", "string": "Réponse C" },
+          { "name": "ReponseD", "type": "TextObject", "string": "Réponse D" },
+          { "name": "Score", "type": "TextObject", "string": "0€" }
+        ],
+        "events": [
+          {
+            "type": "BuiltinCommonInstructions::Comment",
+            "comment": "Chargement de la première question"
+          },
+          {
+            "type": "BuiltinCommonInstructions::Standard",
+            "conditions": [],
+            "actions": [
+              { "type": "ChangeSceneVariable", "parameters": ["QuestionID", "0"] },
+              { "type": "Scene", "parameters": ["AfficherQuestion"] }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Admin",
+        "objects": [
+          { "name": "ChampQuestion", "type": "TextInputObject", "string": "" },
+          { "name": "ChampReponseA", "type": "TextInputObject", "string": "" },
+          { "name": "ChampReponseB", "type": "TextInputObject", "string": "" },
+          { "name": "ChampReponseC", "type": "TextInputObject", "string": "" },
+          { "name": "ChampReponseD", "type": "TextInputObject", "string": "" },
+          { "name": "BoutonAjouter", "type": "Sprite", "animations": [{ "image": "assets/images/boutons.png" }] }
+        ],
+        "events": [
+          {
+            "type": "BuiltinCommonInstructions::Standard",
+            "conditions": [
+              { "type": "CursorOnObject", "parameters": ["BoutonAjouter"] },
+              { "type": "MouseButtonReleased", "parameters": ["Left"] }
+            ],
+            "actions": [
+              { "type": "BuiltinCommonInstructions::AppendToJSON", "parameters": ["questions.json", "{question:ChampQuestion.text, A:ChampReponseA.text, B:ChampReponseB.text, C:ChampReponseC.text, D:ChampReponseD.text, correct:'A'}"] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
